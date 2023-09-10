@@ -1,0 +1,9 @@
+* {
+  background-color: #1a1919;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+@import "./shared.css";
+@import "./navbar.css";
+@import "./home.css";
