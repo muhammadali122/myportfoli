@@ -21,32 +21,32 @@ function Navigation() {
             <Navbar.Collapse>
               <Nav className="fw-600 ms-auto">
                 <NavLink
-                  className="pe-3 nav-link"
+                  className="me-3 nav-link"
                   to="/home"
-                  defaultChecked
+                  activeClassName="activeLink"
                 >
                   Home
                 </NavLink>
                 <NavLink
-                  className="pe-3 nav-link"
+                  className="me-3 nav-link"
                   to="/about"
                 >
                   About
                 </NavLink>
                 <NavLink
-                  className="pe-3 nav-link"
+                  className="me-3 nav-link"
                   to="/resume"
                 >
                   Resume
                 </NavLink>
                 <NavLink
-                  className="pe-3 nav-link"
+                  className="me-3 nav-link"
                   to="/skills"
                 >
                   Skills
                 </NavLink>
                 <NavLink
-                  className="nav-link"
+                  className="nav-link me-3"
                   to="/projects"
                 >
                   Projects
