@@ -35,12 +35,6 @@ function Navigation() {
                 </NavLink>
                 <NavLink
                   className="me-3 nav-link"
-                  to="/resume"
-                >
-                  Resume
-                </NavLink>
-                <NavLink
-                  className="me-3 nav-link"
                   to="/skills"
                 >
                   Skills

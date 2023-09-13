@@ -1,3 +1,7 @@
-.home-btns:hover{
-    color: transparent;
+.home-btns:hover {
+  background-color: transparent;
+}
+
+.img-responsive {
+  width: 32rem;
 }

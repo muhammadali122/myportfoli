@@ -1,7 +1,7 @@
 .nav-link{
     color: white;
 }
-.nav-link.active {
+.nav-link.active, a:hover {
   color: #ffc107 !important;
   border-bottom: #ffc107 2px solid;
 }
