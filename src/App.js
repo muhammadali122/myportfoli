@@ -13,7 +13,7 @@ import About from "./pages/About";
 const App = () => {
   return (
     <>
-      <BrowserRouter basename="https://muhammad-ali122.netlify.app">
+      <BrowserRouter >
         <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
