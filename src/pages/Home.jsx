@@ -1,12 +1,10 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button, Container, Image } from "react-bootstrap";
 
-import profilePic from "../assets/images/profile-pic.png";
-import About from "./About";
+import profilePic from "../assets/images/profile-pic.webp";
 
 const Home = () => {
-  const navigate = useNavigate();
   return (
     <>
       <Container className="d-flex flex-md-row flex-column align-items-center">

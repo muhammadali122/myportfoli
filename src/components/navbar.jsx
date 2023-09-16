@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Navbar, Image, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/images/Logo1.png";
+import logo from "../assets/images/Logo1.webp";
 
 function Navigation() {
   return (

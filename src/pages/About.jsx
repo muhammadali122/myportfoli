@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
-import profilePic from "../assets/images/profile-pic.png";
+import profilePic from "../assets/images/profile-pic.webp";
 import { Link } from "react-router-dom";
 import myCv from "../assets/files/Muhammad Ali React Js.pdf"
 
