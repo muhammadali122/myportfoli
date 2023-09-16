@@ -5,3 +5,10 @@
 .img-responsive {
   width: 32rem;
 }
+.hire-me-link:hover{
+  color: black !important;
+}
+.my-work-link:hover{
+  color: white !important;
+  border-bottom: none;
+}
