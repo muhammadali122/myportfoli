@@ -10,7 +10,7 @@ function Navigation() {
         <Navbar bg="dark" expand="md" className="my-0 py-0 navbar-dark">
           <Container fluid className="py-2 w-100">
             <Navbar.Brand>
-              <NavLink to="/">
+              <NavLink to="/home">
                 <Image src={logo} width={200} />
               </NavLink>
             </Navbar.Brand>
@@ -22,7 +22,7 @@ function Navigation() {
               <Nav className="fw-600 ms-auto">
                 <NavLink
                   className="me-3 nav-link"
-                  to="/home"
+                  to={"/home" || "/"}
                   activeClassName="activeLink"
                 >
                   Home
