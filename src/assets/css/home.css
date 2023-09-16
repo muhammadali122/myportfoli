@@ -1,6 +1,9 @@
 .home-btns:hover {
   background-color: transparent;
 }
+.home-container{
+  margin-top: 5rem;
+}
 
 .img-responsive {
   width: 32rem;

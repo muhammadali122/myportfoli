@@ -6,8 +6,8 @@ import logo from "../assets/images/Logo1.webp";
 function Navigation() {
   return (
     <>
-      <Container>
-        <Navbar bg="dark" expand="md" className="my-0 py-0 navbar-dark">
+      <Container className="fixed-top shadow">
+        <Navbar bg="dark" expand="md" className="my-0 py-0 navbar-dark ">
           <Container fluid className="py-2 w-100">
             <Navbar.Brand>
               <NavLink to="/home">
@@ -26,24 +26,6 @@ function Navigation() {
                   activeClassName="activeLink"
                 >
                   Home
-                </NavLink>
-                <NavLink
-                  className="me-3 nav-link"
-                  to="/about"
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  className="me-3 nav-link"
-                  to="/skills"
-                >
-                  Skills
-                </NavLink>
-                <NavLink
-                  className="nav-link me-3"
-                  to="/projects"
-                >
-                  Projects
                 </NavLink>
                 <NavLink
                   className="nav-link"
