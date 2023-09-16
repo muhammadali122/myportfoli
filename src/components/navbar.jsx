@@ -11,12 +11,12 @@ function Navigation() {
           <Container fluid className="py-2 w-100">
             <Navbar.Brand>
               <NavLink to="/home">
-                <Image src={logo} width={200} />
+                <Image src={logo} width={200} height={50} alt="logo"/>
               </NavLink>
             </Navbar.Brand>
             <Navbar.Toggle
               aria-controls="navbar-toggle"
-              className="text-light"
+              className="btn-light"
             />
             <Navbar.Collapse>
               <Nav className="fw-600 ms-auto">

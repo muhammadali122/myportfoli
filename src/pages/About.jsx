@@ -9,7 +9,7 @@ function About() {
     <Container>
       <Container className="d-flex flex-md-row flex-column align-items-center">
         <Container className="text-center mb-md-none mb-3">
-          <Image src={profilePic} className="img-responsive" fluid rounded />
+          <Image src={profilePic} className="img-responsive" fluid rounded  width={400} height={400} alt="profile pic"/>
         </Container>
         <Container className="text-light mx-auto mx-3">
           <h1 className="fw-bolder text-md-start text-center fw-100 text-warning">

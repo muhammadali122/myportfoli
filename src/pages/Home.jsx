@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Container className="d-flex flex-md-row flex-column align-items-center">
         <Container className="text-center mb-md-none mb-3">
-          <Image src={profilePic} className="img-responsive" fluid rounded />
+          <Image src={profilePic} className="img-responsive" fluid rounded width={400} height={400} alt="profile image"/>
         </Container>
         <Container className="me-auto text-light">
           <h6 className="text-warning">HELLO!</h6>
