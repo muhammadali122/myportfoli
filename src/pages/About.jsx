@@ -6,6 +6,7 @@ import myCv from "../assets/files/Muhammad Ali React Js.pdf";
 function About() {
   return (
     <Container className="mt-5 shadow rounded py-5">
+      <h1 className="fw-bolder text-light fw-100 text-center">About Me</h1>
       <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
         <Container className="mb-md-none mb-3 me-auto">
           <Image
@@ -16,9 +17,6 @@ function About() {
           />
         </Container>
         <Container className="text-light">
-          <h1 className="fw-bolder text-md-start text-center fw-100">
-            About Me
-          </h1>
           <div>
             <Row className="pt-4">
               <Col xs={6} md={5} lg={4} className="fw-bold">
