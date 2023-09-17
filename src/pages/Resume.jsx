@@ -1,5 +1,7 @@
 import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import myCv from "../assets/files/Muhammad Ali React Js.pdf";
+import { Link } from "react-router-dom";
 
 function Resume() {
   return (
@@ -72,6 +74,18 @@ function Resume() {
           </Card>
         </Col>
       </Row>
+      <div className="text-center pt-5 pb-3">
+        <Button variant="warning fw-500 rounded-pill px-3 py-2">
+          <Link
+            className="text-decoration-none text-dark bg-transparent hire-me-link"
+            to={myCv}
+            download="Muhammad Ali Front-End Develper.pdf"
+            target="_blank"
+          >
+            DOWNLOAD CV
+          </Link>
+        </Button>
+      </div>
     </Container>
   );
 }

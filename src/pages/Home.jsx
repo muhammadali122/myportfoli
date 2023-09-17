@@ -5,6 +5,7 @@ import { Button, Container, Image } from "react-bootstrap";
 import profilePic from "../assets/images/profile-pic.webp";
 import About from "./About";
 import Resume from "./Resume";
+import Services from "./Services";
 
 const Home = () => {
   return (
@@ -55,6 +56,7 @@ const Home = () => {
       </Container>
       <About />
       <Resume />
+      <Services />
     </>
   );
 };
