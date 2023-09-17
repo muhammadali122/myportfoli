@@ -6,13 +6,13 @@ import myCv from "../assets/files/Muhammad Ali React Js.pdf";
 function About() {
   return (
     <Container className="mt-5 shadow rounded py-5">
-      <h1 className="fw-bolder text-light fw-100 text-center">About Me</h1>
+      <h1 className="fw-bolder text-light fw-100 text-center mb-4">About Me</h1>
       <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
         <Container className="mb-md-none mb-3 me-auto">
           <Image
             src="https://img.icons8.com/wired/1064/FAB005/about-us-male.png"
             rounded
-            width={300}
+            width={250}
             alt="profile pic"
           />
         </Container>

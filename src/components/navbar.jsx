@@ -28,7 +28,7 @@ function Navigation() {
                   Home
                 </NavLink>
                 <NavLink
-                  className="nav-link"
+                  className="nav-link d-none"
                   to="/contact"
                 >
                   Contact

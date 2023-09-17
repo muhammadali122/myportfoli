@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import FontAwesome from "react-fontawesome";
 import { FaDesktop } from "react-icons/fa";
 
 function Services() {
@@ -23,8 +22,8 @@ function Services() {
     textColor: "text-light",
   });
   return (
-    <Container className="mt-5 shadow rounded py-5">
-      <h1 className="fw-bolder text-light fw-100 text-center">Services</h1>
+    <Container className="py-5 shadow rounded">
+      <h1 className="fw-bolder text-light fw-100 text-center mb-4">Services</h1>
       <Row>
         <Col md={6} lg={4}>
           <Card
