@@ -35,7 +35,7 @@ const ContactForm = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="bg-transparent"
         name="contact"
-        data-netlify="true"
+        netlify
         method="POST"
         data-remove-prefix
         value="New mail from muhammad-ali122.netlify.app/home"
