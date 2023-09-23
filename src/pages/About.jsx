@@ -5,14 +5,14 @@ import myCv from "../assets/files/Muhammad Ali React Js.pdf";
 
 function About() {
   return (
-    <Container className="mt-5 shadow rounded py-5">
-      <h1 className="fw-bolder text-light fw-100 text-center mb-4">About Me</h1>
-      <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-        <Container className="mb-md-none mb-3 me-auto">
+    <Container className="py-md-5 py-3">
+      <h1 className="fw-bolder text-light fw-100 text-center py-md-4 py-3 bg-secondary bg-opacity-25 rounded">About Me</h1>
+      <div className="d-flex flex-md-row flex-column align-items-center py-md-5 py-3">
+        <Container className="mb-md-none text-center">
           <Image
             src="https://img.icons8.com/wired/1064/FAB005/about-us-male.png"
             rounded
-            width={250}
+            width={200}
             alt="profile pic"
           />
         </Container>
@@ -39,7 +39,7 @@ function About() {
                 Address
               </Col>
               <Col xs={6} md={7} lg={8} className="text-secondary opacity-100">
-                Punjab Lahore
+                Lahore Punjab
               </Col>
             </Row>
             <Row className="pt-2">
@@ -63,7 +63,7 @@ function About() {
                 +923489310772
               </Col>
             </Row>
-            <div className="mt-4 text-md-start text-center">
+            <div className="mt-4 text-md-start text-center d-none">
               <Button variant="warning fw-500 rounded-pill px-3 py-2">
                 <Link
                   className="text-decoration-none text-dark bg-transparent hire-me-link"

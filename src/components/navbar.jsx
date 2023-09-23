@@ -16,14 +16,13 @@ function Navigation() {
             </Navbar.Brand>
             <Navbar.Toggle
               aria-controls="navbar-toggle"
-              className="btn-light"
+              className="btn-light d-none"
             />
             <Navbar.Collapse>
-              <Nav className="fw-600 ms-auto">
+              <Nav className="fw-600 ms-auto d-none">
                 <NavLink
                   className="me-3 nav-link"
                   to={"/home" || "/"}
-                  activeClassName="activeLink"
                 >
                   Home
                 </NavLink>

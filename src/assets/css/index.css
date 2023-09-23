@@ -5,6 +5,6 @@
   font-family: 'Poppins', sans-serif;
 }
 @import "./shared.css";
-@import "./navbar.css";
 @import "./home.css";
 @import "./resume.css";
+@import "./projects.css"

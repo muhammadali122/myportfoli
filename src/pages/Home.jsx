@@ -6,11 +6,14 @@ import profilePic from "../assets/images/profile-pic.webp";
 import About from "./About";
 import Resume from "./Resume";
 import Services from "./Services";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
     <>
-      <Container className="d-flex flex-md-row flex-column align-items-center shadow rounded home-container">
+      <Container className="d-flex flex-md-row flex-column align-items-center home-container py-md-5 py-3">
         <Container className="text-center mb-md-none mb-3">
           <Image
             src={profilePic}
@@ -33,7 +36,7 @@ const Home = () => {
             <Button className="rounded-pill bg-warning text-dark border-0 me-2 home-btns fw-500 py-2">
               <Link
                 className="text-decoration-none text-dark bg-transparent hire-me-link"
-                to="https://www.upwork.com"
+                to="https://www.upwork.com/freelancers/~019291f06f96df4423"
                 target="_blank"
               >
                 HIRE ME
@@ -41,7 +44,7 @@ const Home = () => {
             </Button>
             <Button
               variant="outline-light"
-              className="rounded-pill text-light home-btns fw-500 border py-2"
+              className="rounded-pill text-light home-btns fw-500 border py-2 d-none"
             >
               <Link
                 className="text-decoration-none text-light bg-transparent my-work-link"
@@ -57,6 +60,9 @@ const Home = () => {
       <About />
       <Resume />
       <Services />
+      <Skills />
+      <Projects />
+      <Contact />
     </>
   );
 };

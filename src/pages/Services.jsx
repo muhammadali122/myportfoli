@@ -1,51 +1,24 @@
 import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { FaDesktop } from "react-icons/fa";
+import { styleConstant, onHoverStyleConstant } from "../constants";
 
 function Services() {
-  const [webstyle, setWebStyle] = useState({
-    color: "#ffc107",
-    bgColor: "bg-dark",
-    border: "border-bottom border-light",
-    textColor: "text-light",
-  });
-  const [devStyle, setDevStyle] = useState({
-    color: "#ffc107",
-    bgColor: "bg-dark",
-    border: "border-bottom border-light",
-    textColor: "text-light",
-  });
-  const [unitStyle, setUnitStyle] = useState({
-    color: "#ffc107",
-    bgColor: "bg-dark",
-    border: "border-bottom border-light",
-    textColor: "text-light",
-  });
+  const [webstyle, setWebStyle] = useState(styleConstant);
+  const [devStyle, setDevStyle] = useState(styleConstant);
+  const [unitStyle, setUnitStyle] = useState(styleConstant);
+
   return (
-    <Container className="py-5 shadow rounded">
-      <h1 className="fw-bolder text-light fw-100 text-center mb-4">Services</h1>
-      <Row>
+    <Container className="py-md-5 py-3">
+      <h1 className="fw-bolder text-light fw-100 text-center py-md-4 py-3 bg-secondary bg-opacity-25 rounded">Services</h1>
+      <Row className="py-md-5 py-3">
         <Col md={6} lg={4}>
           <Card
-            className="text-center"
-            onMouseEnter={() =>
-              setWebStyle({
-                color: "white",
-                bgColor: "bg-warning",
-                border: "border-bottom border-dark",
-                textColor: "text-dark",
-              })
-            }
-            onMouseLeave={() =>
-              setWebStyle({
-                color: "#ffc107",
-                bgColor: "bg-dark",
-                border: "border-bottom border-light",
-                textColor: "text-light",
-              })
-            }
+            className="text-center "
+            onMouseEnter={() => setWebStyle(onHoverStyleConstant)}
+            onMouseLeave={() => setWebStyle(styleConstant)}
           >
-            <Card.Body className={`${webstyle.bgColor} p-5`}>
+            <Card.Body className={`${webstyle.bgColor} p-5 rounded`}>
               <FaDesktop
                 color={webstyle?.color}
                 size={100}
@@ -60,29 +33,15 @@ function Services() {
         </Col>
         <Col md={6} lg={4} className="mt-md-auto my-3">
           <Card
-            className="text-center"
-            onMouseEnter={() =>
-              setDevStyle({
-                color: "white",
-                bgColor: "bg-warning",
-                border: "border-bottom border-dark",
-                textColor: "text-dark",
-              })
-            }
-            onMouseLeave={() =>
-              setDevStyle({
-                color: "#ffc107",
-                bgColor: "bg-dark",
-                border: "border-bottom border-light",
-                textColor: "text-light",
-              })
-            }
+            className="text-center "
+            onMouseEnter={() => setDevStyle(onHoverStyleConstant)}
+            onMouseLeave={() => setDevStyle(styleConstant)}
           >
-            <Card.Body className={`${devStyle.bgColor} p-5`}>
+            <Card.Body className={`${devStyle.bgColor} p-5 rounded`}>
               <FaDesktop
                 color={devStyle?.color}
                 size={100}
-                className="bg-transparent"
+                className="bg-transparent "
               />
               <h5 className={`${devStyle.textColor} pb-2 pt-3 bg-transparent `}>
                 Web Development
@@ -93,25 +52,11 @@ function Services() {
         </Col>
         <Col md={6} lg={4} className="mt-lg-auto my-md-3 my-auto">
           <Card
-            className="text-center"
-            onMouseEnter={() =>
-              setUnitStyle({
-                color: "white",
-                bgColor: "bg-warning",
-                border: "border-bottom border-dark",
-                textColor: "text-dark",
-              })
-            }
-            onMouseLeave={() =>
-              setUnitStyle({
-                color: "#ffc107",
-                bgColor: "bg-dark",
-                border: "border-bottom border-light",
-                textColor: "text-light",
-              })
-            }
+            className="text-center "
+            onMouseEnter={() => setUnitStyle(onHoverStyleConstant)}
+            onMouseLeave={() => setUnitStyle(styleConstant)}
           >
-            <Card.Body className={`${unitStyle.bgColor} p-5`}>
+            <Card.Body className={`${unitStyle.bgColor} p-5 rounded`}>
               <FaDesktop
                 color={unitStyle?.color}
                 size={100}

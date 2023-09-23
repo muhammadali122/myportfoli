@@ -1,0 +1,28 @@
+.fullRail {
+  background-image: url("../images/bluelogo.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+}
+.survey {
+  background-image: url("../images/survey-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+}
+.bg-image-style {
+  max-width: 20rem;
+  max-height: 15rem;
+}
+.fullRail:hover {
+    opacity: 90%;
+}
+.survey:hover {
+    opacity: 90%;
+}
+.project-div {
+  z-index: 10;
+  top: 5%;
+  opacity: 100%;
+}
