@@ -28,6 +28,8 @@ const ContactForm = () => {
         name="contact"
         data-netlify="true"
         method="POST"
+        data-remove-prefix
+        value="New mail from muhammad-ali122.netlify.app/home"
       >
         <Row className="g-3 my-auto bg-transparent">
           <Col xs={12} className="bg-transparent">
