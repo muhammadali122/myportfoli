@@ -26,7 +26,7 @@ const ContactForm = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="bg-transparent"
         name="contact"
-        data-netlify={true}
+        data-netlify="true"
         method="POST"
       >
         <Row className="g-3 my-auto bg-transparent">
