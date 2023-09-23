@@ -18,8 +18,7 @@ const ContactForm = () => {
     return validator.isEmail(email);
   };
 
-  const onSubmit = (data) => {
-    console.log("Submitted", data);
+  const onSubmit = () => {
     toast(<>Successfully Submitted</>, {
       type: toast.TYPE.SUCCESS,
       position: toast.POSITION.TOP_RIGHT,
