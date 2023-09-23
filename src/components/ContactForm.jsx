@@ -1,11 +1,13 @@
 import React from "react";
 import validator from "validator";
+import { toast } from "react-toastify";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 const ContactForm = () => {
   const {
+    reset,
     register,
     handleSubmit,
     formState: { errors },
@@ -18,6 +20,14 @@ const ContactForm = () => {
 
   const onSubmit = (data) => {
     console.log("Submitted", data);
+    toast(<>Successfully Submitted</>, {
+      type: toast.TYPE.SUCCESS,
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 2000,
+      toastClassName: "custom-toast",
+      bodyClassName: "custom-toast-body",
+    });
+    reset();
   };
 
   return (
@@ -131,7 +141,10 @@ const ContactForm = () => {
             </Form.Group>
           </Col>
           <Col xs={12} className="bg-transparent text-end me-auto">
-            <Button type="submit" variant="warning" className="">
+            <Button
+              type="submit"
+              variant="warning"
+            >
               Submit
             </Button>
           </Col>

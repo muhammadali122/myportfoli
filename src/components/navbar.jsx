@@ -6,7 +6,7 @@ import logo from "../assets/images/Logo1.webp";
 function Navigation() {
   return (
     <>
-      <Container className="fixed-top shadow">
+      <Container className="fixed-top shadow-bottom">
         <Navbar bg="dark" expand="md" className="my-0 py-0 navbar-dark ">
           <Container fluid className="py-2 w-100">
             <Navbar.Brand>
