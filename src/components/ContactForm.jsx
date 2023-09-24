@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import validator from "validator";
+import { send } from "emailjs-com";
 import { toast } from "react-toastify";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row, Spinner } from "react-bootstrap";
 
 const ContactForm = () => {
   const {
@@ -13,20 +14,36 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm();
 
+  const [loading, setLoading] = useState(false);
+
   //Validate Email
   const isEmailValid = (email) => {
     return validator.isEmail(email);
   };
 
-  const onSubmit = () => {
-    toast(<>Successfully Submitted</>, {
-      type: toast.TYPE.SUCCESS,
-      position: toast.POSITION.TOP_RIGHT,
-      autoClose: 2000,
-      toastClassName: "custom-toast",
-      bodyClassName: "custom-toast-body",
-    });
-    reset();
+  const onSubmit = (data) => {
+    setLoading(true);
+    send("service_xfyc7sv", "template_svkzo85", data, "ax-1w90GPv1yJgDEj")
+      .then((_res) => {
+        toast(<>Successfully Submitted</>, {
+          type: toast.TYPE.SUCCESS,
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 2000,
+          toastClassName: "custom-toast",
+          bodyClassName: "custom-toast-body",
+        });
+        reset();
+      })
+      .catch((err) => {
+        toast(<>Something went wrong</>, {
+          type: toast.TYPE.ERROR,
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 2000,
+          toastClassName: "custom-toast",
+          bodyClassName: "custom-toast-body",
+        });
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -140,11 +157,13 @@ const ContactForm = () => {
             </Form.Group>
           </Col>
           <Col xs={12} className="bg-transparent text-end me-auto">
-            <Button
-              type="submit"
-              variant="warning"
-            >
+            <Button type="submit" variant="warning" disabled={loading}>
               Submit
+              <Spinner
+                animation="border"
+                className={`${loading ? "" : "d-none"} bg-transparent ms-2`}
+                size="sm"
+              />
             </Button>
           </Col>
         </Row>

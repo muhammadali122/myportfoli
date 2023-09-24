@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { CgIfDesign } from "react-icons/cg";
+import { SiTestinglibrary } from "react-icons/si";
+import { TbDeviceDesktopCode } from "react-icons/tb";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { FaDesktop } from "react-icons/fa";
 import { styleConstant, onHoverStyleConstant } from "../constants";
 
 function Services() {
@@ -19,7 +21,7 @@ function Services() {
             onMouseLeave={() => setWebStyle(styleConstant)}
           >
             <Card.Body className={`${webstyle.bgColor} p-5 rounded`}>
-              <FaDesktop
+              <CgIfDesign
                 color={webstyle?.color}
                 size={100}
                 className="bg-transparent"
@@ -38,7 +40,7 @@ function Services() {
             onMouseLeave={() => setDevStyle(styleConstant)}
           >
             <Card.Body className={`${devStyle.bgColor} p-5 rounded`}>
-              <FaDesktop
+              <TbDeviceDesktopCode
                 color={devStyle?.color}
                 size={100}
                 className="bg-transparent "
@@ -57,7 +59,7 @@ function Services() {
             onMouseLeave={() => setUnitStyle(styleConstant)}
           >
             <Card.Body className={`${unitStyle.bgColor} p-5 rounded`}>
-              <FaDesktop
+              <SiTestinglibrary
                 color={unitStyle?.color}
                 size={100}
                 className="bg-transparent"
