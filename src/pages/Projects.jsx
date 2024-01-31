@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { fulrailConstants, surveyConstants } from "../constants";
+import { fulrailConstants, surveyConstants, zentifySystems } from "../constants";
 import ProjectContainer from "../layout/ProjectContainer";
 
 const Projects = () => {
@@ -24,6 +24,13 @@ const Projects = () => {
                 mainClass="survey"
                 title={surveyConstants.title}
                 description={surveyConstants.description}
+              />
+            </Col>
+            <Col md={6} lg={4}>
+              <ProjectContainer
+                mainClass="zentify"
+                title={zentifySystems.title}
+                description={zentifySystems.description}
               />
             </Col>
           </Row>

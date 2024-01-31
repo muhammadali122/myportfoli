@@ -12,3 +12,7 @@ export const surveyConstants = {
     title:"Survey",
     description: "Survey is a tool for creating survey for a customer which place order on 9Fold, And calculate performace of a restaurant ",
 }
+export const zentifySystems = {
+    title:"Zentify Systems",
+    description: "Zentify Systems is a leading software house specializing in mobile and web app development services.",
+}

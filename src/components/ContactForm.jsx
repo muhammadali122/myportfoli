@@ -22,7 +22,6 @@ const ContactForm = () => {
   };
 
   const onSubmit = (data) => {
-    setLoading(true);
     send("service_xfyc7sv", "template_svkzo85", data, "ax-1w90GPv1yJgDEj")
       .then((_res) => {
         toast(<>Successfully Submitted</>, {

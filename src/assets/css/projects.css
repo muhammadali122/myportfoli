@@ -11,6 +11,13 @@
   background-position: center;
   height: 15rem;
 }
+.zentify {
+  background-image: url("../images/zintify-logo.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+}
 .bg-image-style {
   max-width: 20rem;
   max-height: 15rem;

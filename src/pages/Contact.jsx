@@ -47,21 +47,21 @@ const Contact = () => {
             </Col>
             <Col sm={6} md={3}>
               <div className="text-center">
-                <span className="bg-secondary bg-opacity-50 rounded-circle p-5">
-                  <Link
-                    to="#"
-                    onClick={(e) => {
-                      window.location.href = "mailto:muhammadali0030@yahoo.com";
-                      e.preventDefault();
-                    }}
-                    className="text-decoration-none text-light"
-                  >
+                <Link
+                  to="#"
+                  onClick={(e) => {
+                    window.location.href = "mailto:muhammadali0030@yahoo.com";
+                    e.preventDefault();
+                  }}
+                  className="text-decoration-none text-light"
+                >
+                  <span className="bg-secondary bg-opacity-50 rounded-circle p-5">
                     <FaEnvelope
                       size={35}
                       className="bg-transparent text-warning"
                     />
-                  </Link>
-                </span>
+                  </span>
+                </Link>
                 <div className="mt-5">
                   <h6 className="bg-transparent text-light py-3">
                     <Link
@@ -81,12 +81,17 @@ const Contact = () => {
             </Col>
             <Col sm={6} md={3}>
               <div className="text-center">
-                <span className="bg-secondary bg-opacity-50 rounded-circle p-5">
-                  <FaLinkedin
-                    size={35}
-                    className="bg-transparent text-warning"
-                  />
-                </span>
+                <Link
+                  to="https://www.linkedin.com/in/muhammad-ali-5b5339172/"
+                  className="text-decoration-none text-light"
+                >
+                  <span className="bg-secondary bg-opacity-50 rounded-circle p-5">
+                    <FaLinkedin
+                      size={35}
+                      className="bg-transparent text-warning"
+                    />
+                  </span>
+                </Link>
                 <div className="mt-5">
                   <h6 className="bg-transparent text-light py-3">
                     <Link
