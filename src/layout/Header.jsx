@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Image } from "react-bootstrap";
-import { FaFacebook, FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/images/Logo1.webp";
-import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (

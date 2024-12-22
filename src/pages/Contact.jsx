@@ -1,14 +1,14 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import {
   FaLocationDot,
   FaPhone,
   FaEnvelope,
   FaLinkedin,
 } from "react-icons/fa6";
-import { IoMdCall, IoMdMail, IoMdPhonePortrait } from "react-icons/io";
-
+import { IoMdCall, IoMdMail } from "react-icons/io";
 import { Link } from "react-router-dom";
+
 import ContactForm from "../components/ContactForm.jsx";
 import AreaHeading from "../layout/areaHeading.jsx";
 
