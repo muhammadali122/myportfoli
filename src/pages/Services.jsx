@@ -1,54 +1,40 @@
 import React, { useState } from "react";
-import { CgIfDesign } from "react-icons/cg";
+import { RiSendToBack } from "react-icons/ri";
 import { SiTestinglibrary } from "react-icons/si";
 import { TbDeviceDesktopCode } from "react-icons/tb";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { MdOutlineIntegrationInstructions } from "react-icons/md";
+
+import AreaHeading from "../layout/areaHeading";
 import { styleConstant, onHoverStyleConstant } from "../constants";
 
 function Services() {
-  const [webstyle, setWebStyle] = useState(styleConstant);
-  const [devStyle, setDevStyle] = useState(styleConstant);
+  const [webDev, setWebDevStyle] = useState(styleConstant);
   const [unitStyle, setUnitStyle] = useState(styleConstant);
+  const [integrationStyle, setIntegrationStyle] = useState(styleConstant);
+  const [endToEndStyle, setEndToEndStyle] = useState(styleConstant);
 
   return (
     <Container className="py-md-5 py-3">
-      <h1 className="fw-bolder text-light fw-100 text-center py-md-4 py-3 bg-secondary bg-opacity-25 rounded">Services</h1>
+      <AreaHeading word1="SERVICES" />
+
       <Row className="py-md-5 py-3">
-        <Col md={6} lg={4}>
-          <Card
-            className="text-center "
-            onMouseEnter={() => setWebStyle(onHoverStyleConstant)}
-            onMouseLeave={() => setWebStyle(styleConstant)}
-          >
-            <Card.Body className={`${webstyle.bgColor} p-5 rounded`}>
-              <CgIfDesign
-                color={webstyle?.color}
-                size={100}
-                className="bg-transparent"
-              />
-              <h5 className={`${webstyle.textColor} pb-2 pt-3 bg-transparent `}>
-                Web Design
-              </h5>
-              <div className={`${webstyle.border} w-25 mx-auto`} />
-            </Card.Body>
-          </Card>
-        </Col>
         <Col md={6} lg={4} className="mt-md-auto my-3">
           <Card
             className="text-center "
-            onMouseEnter={() => setDevStyle(onHoverStyleConstant)}
-            onMouseLeave={() => setDevStyle(styleConstant)}
+            onMouseEnter={() => setWebDevStyle(onHoverStyleConstant)}
+            onMouseLeave={() => setWebDevStyle(styleConstant)}
           >
-            <Card.Body className={`${devStyle.bgColor} p-5 rounded`}>
+            <Card.Body className={`${webDev.bgColor} p-5 rounded`}>
               <TbDeviceDesktopCode
-                color={devStyle?.color}
+                color={webDev?.color}
                 size={100}
                 className="bg-transparent "
               />
-              <h5 className={`${devStyle.textColor} pb-2 pt-3 bg-transparent `}>
+              <h5 className={`${webDev.textColor} pb-2 pt-3 bg-transparent `}>
                 Web Development
               </h5>
-              <div className={`${devStyle.border} w-25 mx-auto`} />
+              <div className={`${webDev.border} w-25 mx-auto`} />
             </Card.Body>
           </Card>
         </Col>
@@ -67,9 +53,51 @@ function Services() {
               <h5
                 className={`${unitStyle.textColor} pb-2 pt-3 bg-transparent `}
               >
-                React JS Unit Tests
+                Unit Tests
               </h5>
               <div className={`${unitStyle.border} w-25 mx-auto`} />
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={6} lg={4} className="mt-md-auto my-3">
+          <Card
+            className="text-center"
+            onMouseEnter={() => setIntegrationStyle(onHoverStyleConstant)}
+            onMouseLeave={() => setIntegrationStyle(styleConstant)}
+          >
+            <Card.Body className={`${integrationStyle.bgColor} p-5 rounded`}>
+              <MdOutlineIntegrationInstructions
+                color={integrationStyle?.color}
+                size={100}
+                className="bg-transparent "
+              />
+              <h5
+                className={`${integrationStyle.textColor} pb-2 pt-3 bg-transparent `}
+              >
+                Integration Tests
+              </h5>
+              <div className={`${integrationStyle.border} w-25 mx-auto`} />
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={6} lg={4} className="mt-md-auto my-3">
+          <Card
+            className="text-center"
+            onMouseEnter={() => setEndToEndStyle(onHoverStyleConstant)}
+            onMouseLeave={() => setEndToEndStyle(styleConstant)}
+          >
+            <Card.Body className={`${endToEndStyle.bgColor} p-5 rounded`}>
+              <RiSendToBack
+                color={endToEndStyle?.color}
+                size={100}
+                className="bg-transparent "
+              />
+              <h5
+                className={`${endToEndStyle.textColor} pb-2 pt-3 bg-transparent `}
+              >
+                End-to-End Testing
+              </h5>
+              <div className={`${endToEndStyle.border} w-25 mx-auto`} />
             </Card.Body>
           </Card>
         </Col>

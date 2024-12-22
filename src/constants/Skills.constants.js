@@ -8,7 +8,7 @@ export const skillsConstants = [
     percentage: 90,
   },
   {
-    label: "ReactJs",
+    label: "React Js",
     percentage: 85,
   },
   {
@@ -32,7 +32,11 @@ export const skillsConstants = [
     percentage: 80,
   },
   {
-    label: "React Testing Library",
+    label: "React Testing Library (Unit & Integration Tests)",
     percentage: 80,
+  },
+  {
+    label: "Playwright (End-to-End Tests)",
+    percentage: 50,
   },
 ];

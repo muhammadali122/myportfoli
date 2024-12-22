@@ -1,13 +1,14 @@
 import React from "react";
 import { Col, Container, ProgressBar, Row } from "react-bootstrap";
+
 import { skillsConstants } from "../constants";
+import AreaHeading from "../layout/areaHeading";
 
 const Skills = () => {
   return (
     <Container className="py-md-5 py-3">
-      <h1 className="fw-bolder text-light fw-100 text-center py-md-4 py-3 bg-secondary bg-opacity-25 rounded">
-        My Skills
-      </h1>
+      <AreaHeading word1="MY" word2="SKILLS" />
+
       <div className="py-md-5 py-3">
         <Row className="g-4">
           {skillsConstants.map((skill) => (

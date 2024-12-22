@@ -46,7 +46,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Container className="bg-transparent px-md-5 px-3 py-2 ">
+    <Container className=" px-md-5 px-3 py-2 ">
       <Form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-transparent"
@@ -56,44 +56,40 @@ const ContactForm = () => {
         data-remove-prefix
         value="New mail from muhammad-ali122.netlify.app/home"
       >
-        <Row className="g-3 my-auto bg-transparent">
-          <Col xs={12} className="bg-transparent">
-            <Form.Group className="bg-white">
-              <Form.Label className="text-dark bg-transparent fw-500">
-                Name:
-              </Form.Label>
+        <Row className="g-3 my-auto">
+          <Col md={6}>
+            <Form.Group>
               <Form.Control
                 type="text"
                 name="name"
                 maxLength={25}
                 minLength={1}
                 placeholder="your name"
-                className={`${errors.name ? "is-invalid" : ""}`}
+                className={`${
+                  errors.name && "is-invalid"
+                } border-0 bg-secondary bg-opacity-25 rounded-4 text-white input-field px-4 py-2`}
                 {...register("name", {
                   required: true,
                 })}
               />
               <Form.Text
-                className={`${
-                  errors.name ? "text-danger bg-transparent" : "d-none"
-                }`}
+                className={`${errors.name ? "text-danger" : "d-none"}`}
               >
                 please enter name
               </Form.Text>
             </Form.Group>
           </Col>
-          <Col xs={12} className="bg-transparent">
-            <Form.Group className="bg-transparent">
-              <Form.Label className="text-dark bg-transparent fw-500">
-                Email:
-              </Form.Label>
+          <Col md={6}>
+            <Form.Group>
               <Form.Control
                 type="email"
                 name="email"
                 maxLength={25}
                 minLength={1}
                 placeholder="your email"
-                className={`${errors.email ? "is-invalid" : ""}`}
+                className={`${
+                  errors.email && "is-invalid"
+                }  border-0 bg-secondary bg-opacity-25 rounded-4 text-white input-field px-4 py-2`}
                 {...register("email", {
                   required: true,
                   validate: (value) =>
@@ -101,63 +97,60 @@ const ContactForm = () => {
                 })}
               />
               <Form.Text
-                className={`${
-                  errors.email ? "text-danger bg-transparent" : "d-none"
-                }`}
+                className={`${errors.email ? "text-danger" : "d-none"}`}
               >
                 please enter email
               </Form.Text>
             </Form.Group>
           </Col>
-          <Col xs={12} className="bg-transparent">
-            <Form.Group className="bg-transparent">
-              <Form.Label className="text-dark bg-transparent fw-500">
-                Subject:
-              </Form.Label>
+          <Col xs={12}>
+            <Form.Group>
               <Form.Control
                 type="text"
                 name="subject"
                 maxLength={35}
                 minLength={1}
                 placeholder="subject"
-                className={`${errors.subject ? "is-invalid" : ""}`}
+                className={`${
+                  errors.subject && "is-invalid"
+                }  border-0 bg-secondary bg-opacity-25 rounded-4 text-white input-field px-4 py-2`}
                 {...register("subject", { required: true })}
               />
               <Form.Text
-                className={`${
-                  errors.subject ? "text-danger bg-transparent" : "d-none"
-                }`}
+                className={`${errors.subject ? "text-danger" : "d-none"}`}
               >
                 please enter subject
               </Form.Text>
             </Form.Group>
           </Col>
-          <Col xs={12} className="bg-transparent">
-            <Form.Group className="bg-transparent">
-              <Form.Label className="text-dark bg-transparent fw-500">
-                Message:
-              </Form.Label>
+          <Col xs={12}>
+            <Form.Group>
               <Form.Control
                 as="textarea"
                 name="message"
                 rows={4}
                 minLength={1}
                 placeholder="message"
-                className={`${errors.message ? "is-invalid" : ""}`}
+                className={`${
+                  errors.message && "is-invalid"
+                }  border-0 bg-secondary bg-opacity-25 rounded-4 text-white input-field px-4 py-2`}
                 {...register("message", { required: true })}
               />
               <Form.Text
-                className={`${
-                  errors.message ? "text-danger bg-transparent" : "d-none"
-                }`}
+                className={`${errors.message ? "text-danger" : "d-none"}`}
               >
                 please enter message
               </Form.Text>
             </Form.Group>
           </Col>
-          <Col xs={12} className="bg-transparent text-end me-auto">
-            <Button type="submit" variant="warning" disabled={loading}>
-              Submit
+          <Col xs={12} className="text-end me-auto">
+            <Button
+              type="submit"
+              variant="warning"
+              disabled={loading}
+              className="rounded-0 px-3 py-2"
+            >
+              SUBMIT
               <Spinner
                 animation="border"
                 className={`${loading ? "" : "d-none"} bg-transparent ms-2`}

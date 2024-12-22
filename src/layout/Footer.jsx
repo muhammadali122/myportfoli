@@ -30,7 +30,7 @@ function Footer() {
             <FaFacebook size={20} />
           </Link>
         </div>
-        <p>Copyright ©2024 All rights reserved by Muhammad Ali</p>
+        <p className="mb-0">Copyright All rights reserved by Muhammad Ali</p>
       </Container>
     </>
   );

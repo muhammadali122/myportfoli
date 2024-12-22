@@ -18,6 +18,13 @@
   background-position: center;
   height: 15rem;
 }
+.ciwuw {
+  background-image: url("../images/CIWUW-lg.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+}
 .bg-image-style {
   max-width: 20rem;
   max-height: 15rem;
