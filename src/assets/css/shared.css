@@ -32,7 +32,6 @@ body {
   font-weight: 1000;
 }
 .custom-toast-body > div {
-  background-color:transparent;
   color: white;
   border-radius: 6px;
 }

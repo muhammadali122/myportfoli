@@ -11,10 +11,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter basename={process.env.REACT_APP_BASE_URL}>
-        <ToastContainer
-          closeButton={false}
-          style={{ backgroundColor: "transparent" }}
-        />
+        <ToastContainer closeButton={false} theme="colored" />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

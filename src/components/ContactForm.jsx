@@ -22,14 +22,13 @@ const ContactForm = () => {
   };
 
   const onSubmit = (data) => {
-    send("service_xfyc7sv", "template_svkzo85", data, "ax-1w90GPv1yJgDEj")
+    send("service_dx6kxjm", "template_zdmfueu", data, "yz5HzAsHc4nauluOb")
       .then((_res) => {
-        toast(<>Successfully Submitted</>, {
+        toast("Successfully Submitted", {
           type: toast.TYPE.SUCCESS,
           position: toast.POSITION.TOP_RIGHT,
           autoClose: 2000,
-          toastClassName: "custom-toast",
-          bodyClassName: "custom-toast-body",
+          className: "custom-toast-body",
         });
         reset();
       })
