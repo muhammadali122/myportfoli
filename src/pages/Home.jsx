@@ -42,7 +42,7 @@ const Home = () => {
               <Link
                 className="text-decoration-none text-dark bg-transparent hire-me-link"
                 to={myCv}
-                download="Muhammad Ali Front-End Develper.pdf"
+                download="Muhammad-Ali-Software-Engineer.pdf"
                 target="_blank"
               >
                 DOWNLOAD CV
