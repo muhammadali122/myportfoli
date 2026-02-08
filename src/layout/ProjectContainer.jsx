@@ -19,14 +19,16 @@ const ProjectContainer = (props) => {
   };
 
   return (
-    <>
+    <div className="project-card-3d">
       <div
-        className={`${props.mainClass} rounded bg-white`}
+        className={`${props.mainClass} rounded`}
         onMouseEnter={handleMouseOver}
         onMouseLeave={handleMouseLeave}
+        style={{ overflow: "hidden" }}
       >
         <div
           className={`h-100 p-4 text-center rounded ${mainDivStyle}`}
+          style={{ transition: "all 0.4s ease" }}
         >
           <span className="my-auto bg-transparent">
             <h2 className={headingStyle}>{props.title}</h2>
@@ -34,7 +36,7 @@ const ProjectContainer = (props) => {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

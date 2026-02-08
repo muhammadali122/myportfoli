@@ -25,16 +25,61 @@
   background-position: center;
   height: 15rem;
 }
+.salarStar {
+  background-image: url("../images/salar-star-logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+}
+.goldenJasmine {
+  background-image: url("../images/golden-jasmine-logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+}
+.bodyMap {
+  background-image: url("../images/bodymap-logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+}
+.jarvis {
+  background-image: url("../images/jarvis-logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+}
 .bg-image-style {
   max-width: 20rem;
   max-height: 15rem;
 }
-.fullRail:hover {
-    opacity: 90%;
+
+/* Project card hover transitions */
+.fullRail,
+.survey,
+.zentify,
+.ciwuw,
+.salarStar,
+.goldenJasmine,
+.bodyMap,
+.jarvis {
+  transition: all 0.4s ease;
 }
-.survey:hover {
-    opacity: 90%;
+.fullRail:hover,
+.survey:hover,
+.zentify:hover,
+.ciwuw:hover,
+.salarStar:hover,
+.goldenJasmine:hover,
+.bodyMap:hover,
+.jarvis:hover {
+  opacity: 90%;
 }
+
 .project-div {
   z-index: 10;
   top: 5%;

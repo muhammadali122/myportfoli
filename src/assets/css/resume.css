@@ -1,6 +1,13 @@
-.card-text{
-    color: rgb(155, 152, 152) !important;
+.card-text {
+  color: rgb(155, 152, 152) !important;
 }
-.card{
-    background-color: #1A1A1A !important;
+.card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  border-color: rgba(255, 193, 7, 0.15) !important;
 }

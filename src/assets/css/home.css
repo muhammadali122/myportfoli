@@ -1,17 +1,26 @@
 .home-btns:hover {
   background-color: transparent;
 }
-.home-container{
+.home-container {
   margin-top: 5rem;
 }
 
 .img-responsive {
   width: 32rem;
 }
-.hire-me-link:hover{
+.hire-me-link:hover {
   color: black !important;
 }
-.my-work-link:hover{
+.my-work-link:hover {
   color: white !important;
   border-bottom: none;
+}
+
+/* Hero buttons enhanced */
+.home-btns {
+  transition: all 0.3s ease !important;
+}
+.home-btns:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 193, 7, 0.35);
 }

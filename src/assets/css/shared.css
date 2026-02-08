@@ -1,5 +1,8 @@
 body {
-  background-color: #000000 !important;
+  background: linear-gradient(180deg, #0a0a0f 0%, #0d0d14 50%, #0a0a0f 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 .fw-100 {
   font-weight: 100;
@@ -26,9 +29,9 @@ body {
   font-weight: 800;
 }
 .fw-900 {
-  font-weight: 800;
+  font-weight: 900;
 }
-.fw-100 {
+.fw-1000 {
   font-weight: 1000;
 }
 .custom-toast-body > div {

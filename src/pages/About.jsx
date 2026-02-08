@@ -45,14 +45,26 @@ const personalInfo = [
   },
 ];
 
+const stats = [
+  { number: "6+", label1: "PROJECTS", label2: "COMPLETED" },
+  { number: "3+", label1: "YEARS OF", label2: "EXPERINCE" },
+  { number: "5+", label1: "HAPPY", label2: "CUSTOMERS" },
+  { number: "1+", label1: "AWARDS", label2: "WON" },
+];
+
 function About() {
   return (
     <Container className="py-md-5 py-3">
       <AreaHeading word1="ABOUT" word2="ME" />
       <div className="d-flex flex-md-row flex-column py-md-5 py-3 gap-3 w-100">
-        <div className="text-light w-100">
-          {personalInfo.map((info) => (
-            <Row className="pb-md-4 pb-2 w-100">
+        <div className="text-light w-100" data-aos="fade-right">
+          {personalInfo.map((info, index) => (
+            <Row
+              key={info.label}
+              className="pb-md-4 pb-2 w-100"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               <Col xs={6} md={5} lg={4} className="text-start">
                 <h6 className="fw-bold opacity-50">{info.label}</h6>
               </Col>
@@ -63,54 +75,29 @@ function About() {
             </Row>
           ))}
         </div>
-        <div className="w-100">
+        <div className="w-100" data-aos="fade-left">
           <Row className="g-4">
-            <Col xs={6}>
-              <div className="border rounded border-secondary px-2">
-                <h1 className="text-warning display-4 fw-bold">6+</h1>
-                <div className="d-flex gap-1">
-                  <div className="border border-secondary w-25 align-self-start"></div>
-                  <h5 className="text-white">
-                    PROJECTS <br />
-                    COMPLETED
-                  </h5>
+            {stats.map((stat, index) => (
+              <Col xs={6} key={stat.label1}>
+                <div
+                  className="stat-card-3d"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 150}
+                >
+                  <div className="rounded px-3 py-2 glass-card">
+                    <h1 className="text-warning display-4 fw-bold pulse-glow">
+                      {stat.number}
+                    </h1>
+                    <div className="d-flex gap-1">
+                      <div className="border border-warning w-25 align-self-start opacity-50"></div>
+                      <h5 className="text-white">
+                        {stat.label1} <br /> {stat.label2}
+                      </h5>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </Col>
-            <Col xs={6}>
-              <div className="border rounded border-secondary px-2">
-                <h1 className="text-warning display-4 fw-bold">2+</h1>
-                <div className="d-flex gap-1">
-                  <div className="border border-secondary w-25 align-self-start"></div>
-                  <h5 className="text-white">
-                    YEARS OF <br /> EXPERINCE
-                  </h5>
-                </div>
-              </div>
-            </Col>
-            <Col xs={6}>
-              <div className="border rounded border-secondary px-2">
-                <h1 className="text-warning display-4 fw-bold">4+</h1>
-                <div className="d-flex gap-1">
-                  <div className="border border-secondary w-25 align-self-start"></div>
-                  <h5 className="text-white">
-                    HAPPY
-                    <br /> CUSTOMERS
-                  </h5>
-                </div>
-              </div>
-            </Col>
-            <Col xs={6}>
-              <div className="border rounded border-secondary px-2">
-                <h1 className="text-warning display-4 fw-bold">1+</h1>
-                <div className="d-flex gap-1">
-                  <div className="border border-secondary w-25 align-self-start"></div>
-                  <h5 className="text-white">
-                    AWARDS <br /> WON
-                  </h5>
-                </div>
-              </div>
-            </Col>
+              </Col>
+            ))}
           </Row>
         </div>
       </div>

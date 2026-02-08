@@ -111,15 +111,15 @@ const Contact = () => {
         <div></div>
         <div className="pb-md-5 pb-3">
           <Row className="g-0">
-            <Col md={4}>
-              <h3 className="text-white fw-bold">DON'T BE SHY!</h3>
-              <h6 className="text-white mb-0 py-3">
+            <Col md={4} data-aos="fade-right">
+              <h3 className="text-white fw-bold text-glow">DON'T BE SHY!</h3>
+              <h6 className="text-white mb-0 py-3 opacity-75">
                 Feel free to get in touch with me. I am always open to
                 discussing new projects, creative ideas or opportunities to be
                 part of your visions.
               </h6>
 
-              <div className="d-flex gap-3 pb-3">
+              <div className="d-flex gap-3 pb-3" data-aos="fade-up" data-aos-delay="100">
                 <div>
                   <IoMdMail size={43} color="#ffc107" />
                 </div>
@@ -137,7 +137,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3" data-aos="fade-up" data-aos-delay="200">
                 <div className="bg-warning rounded">
                   <IoMdCall
                     size={40}
@@ -158,7 +158,7 @@ const Contact = () => {
                 </div>
               </div>
             </Col>
-            <Col md={8}>
+            <Col md={8} data-aos="fade-left">
               <ContactForm />
             </Col>
           </Row>

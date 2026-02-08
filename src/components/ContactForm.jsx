@@ -45,7 +45,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Container className=" px-md-5 px-3 py-2 ">
+    <Container className="px-md-5 px-3 py-2">
       <Form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-transparent"
@@ -66,7 +66,7 @@ const ContactForm = () => {
                 placeholder="your name"
                 className={`${
                   errors.name && "is-invalid"
-                } border-0 bg-secondary bg-opacity-25 rounded-4 text-white input-field px-4 py-2`}
+                } rounded-4 text-white input-field px-4 py-2 glass-input`}
                 {...register("name", {
                   required: true,
                 })}
@@ -88,7 +88,7 @@ const ContactForm = () => {
                 placeholder="your email"
                 className={`${
                   errors.email && "is-invalid"
-                }  border-0 bg-secondary bg-opacity-25 rounded-4 text-white input-field px-4 py-2`}
+                } rounded-4 text-white input-field px-4 py-2 glass-input`}
                 {...register("email", {
                   required: true,
                   validate: (value) =>
@@ -112,7 +112,7 @@ const ContactForm = () => {
                 placeholder="subject"
                 className={`${
                   errors.subject && "is-invalid"
-                }  border-0 bg-secondary bg-opacity-25 rounded-4 text-white input-field px-4 py-2`}
+                } rounded-4 text-white input-field px-4 py-2 glass-input`}
                 {...register("subject", { required: true })}
               />
               <Form.Text
@@ -132,7 +132,7 @@ const ContactForm = () => {
                 placeholder="message"
                 className={`${
                   errors.message && "is-invalid"
-                }  border-0 bg-secondary bg-opacity-25 rounded-4 text-white input-field px-4 py-2`}
+                } rounded-4 text-white input-field px-4 py-2 glass-input`}
                 {...register("message", { required: true })}
               />
               <Form.Text
@@ -147,7 +147,7 @@ const ContactForm = () => {
               type="submit"
               variant="warning"
               disabled={loading}
-              className="rounded-0 px-3 py-2"
+              className="rounded-0 px-4 py-2 btn-glow fw-500"
             >
               SUBMIT
               <Spinner

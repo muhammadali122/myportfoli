@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, ProgressBar, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import { skillsConstants } from "../constants";
 import AreaHeading from "../layout/areaHeading";
@@ -10,18 +10,27 @@ const Skills = () => {
       <AreaHeading word1="MY" word2="SKILLS" />
 
       <div className="py-md-5 py-3">
-        <Row className="g-4">
-          {skillsConstants.map((skill) => (
-            <Col md={6} key={skill.label}>
-              <h5 className="text-light">{skill.label}</h5>
-              <ProgressBar
-                now={skill.percentage}
-                variant="warning"
-                className="bg-secondary"
-              />
-            </Col>
-          ))}
-        </Row>
+        {skillsConstants.map((group, groupIndex) => (
+          <div
+            key={group.category}
+            className="mb-4"
+            data-aos="fade-up"
+            data-aos-delay={groupIndex * 150}
+          >
+            <h5 className="text-warning fw-bold mb-3 text-glow">{group.category}</h5>
+            <div className="d-flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-2 rounded-pill bg-secondary bg-opacity-50 text-white fw-500 warning-hover skill-chip-3d"
+                  role="button"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </Container>
   );

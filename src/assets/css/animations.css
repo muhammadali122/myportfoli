@@ -1,0 +1,356 @@
+/* ========================================
+   ANIMATIONS, 3D EFFECTS & GLASSMORPHISM
+   ======================================== */
+
+/* --- Smooth global transitions --- */
+a,
+button,
+.btn,
+.card,
+.rounded-pill,
+.form-control {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- Text glow for section headings --- */
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 193, 7, 0.3),
+    0 0 20px rgba(255, 193, 7, 0.15);
+}
+
+/* --- Profile picture glow --- */
+.profile-glow {
+  position: relative;
+  display: inline-block;
+}
+.profile-glow::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #ffc107,
+    #ff6b35,
+    #ffc107,
+    #ffeb3b,
+    #ffc107
+  );
+  z-index: -1;
+  opacity: 0.6;
+  animation: rotateGlow 4s linear infinite;
+  filter: blur(15px);
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Gradient text for name --- */
+.gradient-text {
+  background: linear-gradient(135deg, #ffc107, #ff8f00, #ffca28);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Glassmorphism card --- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* --- 3D Stat cards (About section) --- */
+.stat-card-3d {
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+.stat-card-3d > div {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateZ(0);
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.stat-card-3d:hover > div {
+  transform: translateY(-6px) rotateX(5deg) rotateY(-3deg);
+  box-shadow: 0 15px 35px rgba(255, 193, 7, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- 3D Service cards --- */
+.service-card-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.service-card-3d .card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateZ(0);
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+.service-card-3d:hover .card {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(255, 193, 7, 0.12),
+    0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* --- 3D Project cards --- */
+.project-card-3d {
+  perspective: 800px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+.project-card-3d:hover {
+  transform: scale(1.03) translateY(-5px);
+}
+.project-card-3d > div {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+.project-card-3d:hover > div {
+  box-shadow: 0 20px 40px rgba(255, 193, 7, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* --- 3D Skill chips --- */
+.skill-chip-3d {
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+.skill-chip-3d::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+.skill-chip-3d:hover::before {
+  left: 100%;
+}
+.skill-chip-3d:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.2);
+}
+
+/* --- Glow border effect --- */
+.glow-border {
+  position: relative;
+}
+.glow-border::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #ffc107, transparent, #ffc107);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.glow-border:hover::after {
+  opacity: 0.5;
+}
+
+/* --- Glowing button --- */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease !important;
+}
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.btn-glow > * {
+  position: relative;
+  z-index: 1;
+}
+.btn-glow:hover::before {
+  width: 300px;
+  height: 300px;
+}
+.btn-glow:hover {
+  box-shadow: 0 5px 25px rgba(255, 193, 7, 0.4);
+  transform: translateY(-2px);
+}
+
+/* --- Social icon hover glow --- */
+.social-icon-glow {
+  transition: all 0.3s ease !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icon-glow:hover {
+  transform: translateY(-3px) scale(1.15);
+  filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.5));
+}
+
+/* --- Timeline icon glow --- */
+.timeline-icon {
+  transition: all 0.3s ease;
+  position: relative;
+}
+.timeline-icon::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(255, 193, 7, 0.3);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(8px);
+}
+.timeline-icon:hover::after {
+  opacity: 1;
+}
+
+/* --- Glassmorphism form inputs --- */
+.glass-input {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.3s ease;
+}
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 193, 7, 0.4) !important;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.12) !important;
+}
+
+/* --- Section divider --- */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 193, 7, 0.3),
+    transparent
+  );
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+/* --- Floating animation for hero --- */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* --- Glassmorphism header/footer --- */
+.glass-header {
+  background: rgba(13, 13, 18, 0.8) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- Animated underline for heading --- */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffc107, #ff8f00);
+  border-radius: 2px;
+  transition: all 0.5s ease;
+  transform: translateX(-50%);
+}
+[data-aos].aos-animate .animated-underline::after,
+.animated-underline.visible::after {
+  width: 60%;
+}
+
+/* --- Background particles/dots decoration --- */
+.bg-dots {
+  position: relative;
+}
+.bg-dots::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    rgba(255, 193, 7, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Pulse animation for stats numbers --- */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 193, 7, 0.5),
+      0 0 30px rgba(255, 193, 7, 0.2);
+  }
+}
+.pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* --- Resume glassmorphism timeline card --- */
+.glass-timeline {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+}
+.glass-timeline:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 193, 7, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}

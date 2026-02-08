@@ -1,42 +1,33 @@
 export const skillsConstants = [
   {
-    label: "JavaScript",
-    percentage: 90,
+    category: "Frontend Technologies",
+    skills: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "React Redux",
+    ],
   },
   {
-    label: "HTML",
-    percentage: 90,
+    category: "Backend Technologies",
+    skills: ["Node.js", "Express.js", "MongoDB"],
   },
   {
-    label: "React Js",
-    percentage: 85,
-  },
-  {
-    label: "CSS",
-    percentage: 85,
-  },
-  {
-    label: "BootStrap",
-    percentage: 85,
-  },
-  {
-    label: "Redux",
-    percentage: 80,
-  },
-  {
-    label: "GitHub",
-    percentage: 80,
-  },
-  {
-    label: "Jest",
-    percentage: 80,
-  },
-  {
-    label: "React Testing Library (Unit & Integration Tests)",
-    percentage: 80,
-  },
-  {
-    label: "Playwright (End-to-End Tests)",
-    percentage: 50,
+    category: "Testing & Development Tools",
+    skills: [
+      "React Testing Library",
+      "Playwright",
+      "Unit Testing",
+      "Integration Testing",
+      "End-to-End Testing",
+      "Git",
+      "GitHub",
+      "Ubuntu Server Deployment",
+    ],
   },
 ];
